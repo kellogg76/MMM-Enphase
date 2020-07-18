@@ -4,12 +4,12 @@
 * MIT Licensed
 */
 
-Module.register("MMM-Solar",{
+Module.register("MMM-Enphase",{
     // Default module config.
     defaults: {
-        url: "https://api.enphaseenergy.com/api/v2/systems/",
+        url: "https://api.enphaseenergy.com/api/v2/systems?callback=my_method",
         apiKey: "", //Enter API key
-        userId: "4d7a45774e6a41320a", //Sample user ID
+        userId: "4d6a51330a", //Sample user ID
 	      systemId: "67", //Sample system
 	      refInterval: 1000 * 60 * 5, //5 minutes
         basicHeader: false,
@@ -18,9 +18,9 @@ Module.register("MMM-Solar",{
     start: function() {
         Log.info("Starting module: " + this.name);
 
-        this.titles = ["Current Power:", "Daily Energy:", "Lifetime Energy:", "Active Inverters: ", "Current Status:"];
-	      this.suffixes = ["Watts", "kWh", "MWh", "", ""];
-	      this.results = ["Loading", "Loading", "Loading", "Loading", "Loading"];
+        this.titles = ["Current Power:", "Daily Energy:", "Lifetime Energy:", "Active Inverters: ", "Current Status:", "Daily $:", "Total $:"];
+	      this.suffixes = ["Watts", "kWh", "MWh", "", "", "", ""];
+	      this.results = ["Loading", "Loading", "Loading", "Loading", "Loading", "Loading", "Loading"];
         this.loaded = false;
         this.getSolarData();
 
