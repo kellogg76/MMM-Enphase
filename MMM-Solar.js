@@ -9,8 +9,8 @@ Module.register("MMM-Enphase",{
     defaults: {
         url: "https://api.enphaseenergy.com/api/v2/systems?callback=my_method",
         apiKey: "", //Enter API key
-        userId: "4d6a51330a", //Sample user ID
-	      systemId: "67", //Sample system
+        userId: "4d6a41794e7a45794d673d3d0a", //Sample user ID
+	      systemId: "1891492", //Sample system
 	      refInterval: 1000 * 60 * 5, //5 minutes
         basicHeader: false,
     },
